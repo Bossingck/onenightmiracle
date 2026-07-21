@@ -270,7 +270,7 @@ function renderTable1(){
   causeRows.forEach(cr=>{
     const allVals = cr.trueRow.concat(cr.dtacRow);
     const mn = Math.min(...allVals), mx = Math.max(...allVals);
-    const rows = [['TRUE',cr.trueRow,cr.trueTot],['DTAC (รวม Unknow)',cr.dtacRow,cr.dtacTot]];
+    const rows = [['TRUE',cr.trueRow,cr.trueTot],['DTAC',cr.dtacRow,cr.dtacTot]];
     rows.forEach(([label,arr,tot],i)=>{
       html += '<tr>';
       if(i===0) html += `<td class="cause" rowspan="2">${cr.cause}</td>`;
